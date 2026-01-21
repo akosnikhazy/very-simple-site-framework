@@ -16,3 +16,6 @@ Then you should edit the auth.yzhk file with the data you just printed to look l
 ```username:passwordhash:saltvalue```
 
 Or even better: create a better login scheme for it. I run small apps with this on my local server, ot this is fine, but on more public spaces you should consider secuirty much more than this.
+
+# Loginless
+If you want it without login (eg.: a simple website) just go to the index.php and get rid of the ```if(!$user -> getLoginStatus()) $view = 'login';```. Then the program routes the visitor to main.
