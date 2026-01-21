@@ -15,7 +15,7 @@ The username and password are admin and admin. You can generate a new one by usi
 Then you should edit the auth.yzhk file with the data you just printed to look like this:
 ```username:passwordhash:saltvalue```
 
-Or even better: create a better login scheme for it. I run small apps with this on my local server, ot this is fine, but on more public spaces you should consider secuirty much more than this.
+Or even better: create a better login scheme for it. I run small apps with this on my local server, so this is fine, but on more public spaces you should consider secuirty much more than this.
 
 # Loginless
-If you want it without login (eg.: a simple website) just go to the index.php and get rid of the ```if(!$user -> getLoginStatus()) $view = 'login';```. Then the program routes the visitor to main.
+If you want it without login (eg.: a simple website) just go to the index.php and get rid of the ```if(!$user -> getLoginStatus()) $view = 'login';```. Then the program routes the visitor to main. Also then you do not need the ```$user = new User();``` line either.
