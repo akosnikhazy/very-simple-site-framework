@@ -16,6 +16,7 @@ $user = new User();
 $view = $_GET['view'] ?? 'main';
 
 // if user not logged in the login page is the only place they can go
+// get rid of this if you want it without login
 if(!$user -> getLoginStatus()) $view = 'login';
 
 $router = new Router($view);
